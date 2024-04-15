@@ -26,7 +26,7 @@ class AddTransPage extends StatelessWidget {
                   children: [
                     const Text("Select Transaction Type"),
                     DropDownBtn(
-                      items: const ['credit', 'Debit'],
+                      items: const ['credit', 'debit'],
                       selectedValue: ctrl.transatype.toString(),
                       selectedItemText: "Select Transaction Type",
                       OnSelected: (String? selectedValue) {

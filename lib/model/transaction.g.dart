@@ -12,7 +12,7 @@ Transaction_details _$Transaction_detailsFromJson(Map<String, dynamic> json) =>
       amount: json['Amount'] as num?,
       description: json['description'] as String?,
       transType: json['transType'] as String?,
-      date: json['Date'] as DateTime,
+      date: json['Date'] as String,
     );
 
 Map<String, dynamic> _$Transaction_detailsToJson(

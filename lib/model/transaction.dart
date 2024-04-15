@@ -18,14 +18,14 @@ class Transaction_details {
   String? transType;
 
   @JsonKey(name: "Date")
-  DateTime? date;
+  String? date;
 
   Transaction_details({
     this.id,
     this.amount,
     this.description,
     this.transType,
-    required DateTime date,
+    required this.date,
   });
 
   factory Transaction_details.fromJson(Map<String, dynamic> json) =>

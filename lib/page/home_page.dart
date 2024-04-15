@@ -33,23 +33,33 @@ class HomePage extends StatelessWidget {
                   DataColumn(
                     label: Text('Description'),
                   ),
+                  // DataColumn(
+                  //   label: Text('Amount'),
+                  // ),
+                  // DataColumn(
+                  //   label: Text('Trans. Type'),
+                  // ),
                   DataColumn(
-                    label: Text('Amount'),
+                    label: Text('credit'),
                   ),
                   DataColumn(
-                    label: Text('Trans. Type'),
+                    label: Text('debit'),
                   ),
-                  /*  DataColumn(
-              label: Text('Running balance'),
-            ),*/
                 ], rows: <DataRow>[
                   ...ctrl.transdetail.map((transaction) {
                     return DataRow(cells: [
                       DataCell(Text((transaction.date).toString())),
                       // DataCell(Text((transaction.id ?? 0).toString())),
                       DataCell(Text(transaction.description ?? '')),
-                      DataCell(Text((transaction.amount ?? 0).toString())),
-                      DataCell(Text(transaction.transType ?? '')),
+                      //  DataCell(Text((transaction.amount ?? 0).toString())),
+                      // DataCell(Text(transaction.transType ?? '')),
+                      DataCell(Text(transaction.transType == "credit"
+                          ? transaction.amount.toString()
+                          : '')),
+                      DataCell(Text(transaction.transType == "debit"
+                          ? transaction.amount.toString()
+                          : '')),
+
                       //  DataCell(Text(transaction.id.toString())),
                       //DataCell(Text(transaction.id.toString())),
                     ]);

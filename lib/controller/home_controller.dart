@@ -34,7 +34,7 @@ class HomeController extends GetxController {
       DocumentReference doc = transCollection.doc();
       Transaction_details transdetail = Transaction_details(
         // id: int.tryParse(doc.id),
-        date: DateTime.now(),
+        date: DateTime.now().toString(),
         amount: double.tryParse(AmountCtrl.text),
         transType: transatype.string,
         description: transactionDescripCtrl.text,
